@@ -1,0 +1,6 @@
+#!/bin/bash
+#BSUB -J "/PHShome/kpf18/runs/two_dose_2021-05-21/1x_supply_bc/3"
+#BSUB -q normal
+#BSUB -u kfitzmaurice@mgh.harvard.edu
+#BSUB -N
+/data/cepac/python/bin/python3.6 /data/cepac/modelVersions/covid-19/covid-v0.10/sim.py /PHShome/kpf18/runs/two_dose_2021-05-21/1x_supply_bc/3

@@ -1,0 +1,5765 @@
+{
+  "model version": "v0.10",
+  "simulation parameters": {
+    "cohort size": 1000000,
+    "time horizon": 360,
+    "fixed seed": true,
+    "detailed state outputs": true,
+    "detailed vaccination outputs": true
+  },
+  "initial state": {
+    "transmission group dist": {
+      "tn_group 0": 0.3668104,
+      "tn_group 1": 0.54292588,
+      "tn_group 2": 0.09026372,
+      "tn_group 3": 0
+    },
+    "risk category dist": {
+      "for tn_group 0": {
+        "0-19y": 1.0,
+        "20-59y": 0.0,
+        ">=60y": 0.0
+      },
+      "for tn_group 1": {
+        "0-19y": 0.0,
+        "20-59y": 1.0,
+        ">=60y": 0.0
+      },
+      "for tn_group 2": {
+        "0-19y": 0.0,
+        "20-59y": 0.0,
+        ">=60y": 1.0
+      },
+      "for tn_group 3": {
+        "0-19y": 1,
+        "20-59y": 0,
+        ">=60y": 0
+      }
+    },
+    "immune states dist": {
+      "for tn_group 0": {
+        "naive": 0.7,
+        "recovered": 0.3,
+        "vaccine_0": 0,
+        "vaccine_1": 0,
+        "vaccine_2": 0,
+        "vaccine_3": 0,
+        "vaccine_4": 0
+      },
+      "for tn_group 1": {
+        "naive": 0.7,
+        "recovered": 0.3,
+        "vaccine_0": 0,
+        "vaccine_1": 0,
+        "vaccine_2": 0,
+        "vaccine_3": 0,
+        "vaccine_4": 0
+      },
+      "for tn_group 2": {
+        "naive": 0.7,
+        "recovered": 0.3,
+        "vaccine_0": 0,
+        "vaccine_1": 0,
+        "vaccine_2": 0,
+        "vaccine_3": 0,
+        "vaccine_4": 0
+      },
+      "for tn_group 3": {
+        "naive": 1,
+        "recovered": 0,
+        "vaccine_0": 0,
+        "vaccine_1": 0,
+        "vaccine_2": 0,
+        "vaccine_3": 0,
+        "vaccine_4": 0
+      }
+    },
+    "initial disease dist": {
+      "for tn_group 0": {
+        "for naive": {
+          "susceptible": 0.999,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for recovered": {
+          "susceptible": 0.0,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0.999
+        },
+        "for vaccine_0": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_1": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_2": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_3": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_4": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        }
+      },
+      "for tn_group 1": {
+        "for naive": {
+          "susceptible": 0.999,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for recovered": {
+          "susceptible": 0.0,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0.999
+        },
+        "for vaccine_0": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_1": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_2": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_3": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_4": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        }
+      },
+      "for tn_group 2": {
+        "for naive": {
+          "susceptible": 0.999,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for recovered": {
+          "susceptible": 0.0,
+          "pre-infectious incubation": 0.00015,
+          "asymptomatic": 0.0004,
+          "mild/moderate": 0.000449,
+          "severe": 5e-07,
+          "critical": 5e-07,
+          "recuperation": 0,
+          "immune": 0.999
+        },
+        "for vaccine_0": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_1": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_2": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_3": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_4": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        }
+      },
+      "for tn_group 3": {
+        "for naive": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for recovered": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_0": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_1": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_2": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_3": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        },
+        "for vaccine_4": {
+          "susceptible": 1,
+          "pre-infectious incubation": 0,
+          "asymptomatic": 0,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0,
+          "recuperation": 0,
+          "immune": 0
+        }
+      }
+    },
+    "covid naive severity dist": {
+      "for 0-19y": {
+        "asymptomatic": 0.299342,
+        "mild/moderate": 0.697833,
+        "severe": 0.002495,
+        "critical": 0.00033
+      },
+      "for 20-59y": {
+        "asymptomatic": 0.179,
+        "mild/moderate": 0.803755,
+        "severe": 0.007952,
+        "critical": 0.009293
+      },
+      "for >=60y": {
+        "asymptomatic": 0.171045,
+        "mild/moderate": 0.76374,
+        "severe": 0.013583,
+        "critical": 0.051632
+      }
+    },
+    "start intervention": {
+      "for tn_group 0": 6,
+      "for tn_group 1": 3,
+      "for tn_group 2": 0,
+      "for tn_group 3": 0
+    }
+  },
+  "disease progression": {
+    "intervention 0": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 1": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 2": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 3": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 4": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 5": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 6": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 7": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 8": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 9": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 10": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 11": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 12": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 13": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 14": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 0.0
+        }
+      }
+    },
+    "intervention 15": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.0,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 16": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    },
+    "intervention 17": {
+      "for severity = asymptomatic": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to immune": 0.09991
+        },
+        "daily switch to pre-recovery probability": {},
+        "daily expedited recovery probability": {}
+      },
+      "for severity = mild/moderate": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to immune": 0.09516
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0
+        }
+      },
+      "for severity = severe": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.1426,
+          "from severe to immune": 0.09084
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0
+        }
+      },
+      "for severity = critical": {
+        "daily disease progression probability": {
+          "from pre-infectious incubation to asymptomatic": 0.31929,
+          "from asymptomatic to mild/moderate": 0.39347,
+          "from mild/moderate to severe": 0.28347,
+          "from severe to critical": 0.20166,
+          "from critical to recuperation": 0.09608,
+          "from recuperation to immune": 0.16091
+        },
+        "daily switch to pre-recovery probability": {
+          "from asymptomatic": 0,
+          "from mild/moderate": 0,
+          "from severe": 0.05475
+        },
+        "daily expedited recovery probability": {
+          "from pre-recovery: asymptomatic": 0,
+          "from pre-recovery: mild/moderate": 0,
+          "from pre-recovery: severe": 1
+        }
+      }
+    }
+  },
+  "disease mortality": {
+    "daily mortality prob for 0-19y while critical": {
+      "on intervention 0": 0.117503,
+      "on intervention 1": 0.117503,
+      "on intervention 2": 6e-06,
+      "on intervention 3": 0.117503,
+      "on intervention 4": 0.117503,
+      "on intervention 5": 6e-06,
+      "on intervention 6": 0.117503,
+      "on intervention 7": 0.117503,
+      "on intervention 8": 6e-06,
+      "on intervention 9": 0.117503,
+      "on intervention 10": 0.117503,
+      "on intervention 11": 0.117503,
+      "on intervention 12": 6e-06,
+      "on intervention 13": 0.117503,
+      "on intervention 14": 0.117503,
+      "on intervention 15": 0.117503,
+      "on intervention 16": 6e-06,
+      "on intervention 17": 0.117503
+    },
+    "daily mortality prob for 20-59y while critical": {
+      "on intervention 0": 0.166247,
+      "on intervention 1": 0.166247,
+      "on intervention 2": 0.0038,
+      "on intervention 3": 0.166247,
+      "on intervention 4": 0.166247,
+      "on intervention 5": 0.0038,
+      "on intervention 6": 0.166247,
+      "on intervention 7": 0.166247,
+      "on intervention 8": 0.0038,
+      "on intervention 9": 0.166247,
+      "on intervention 10": 0.166247,
+      "on intervention 11": 0.166247,
+      "on intervention 12": 0.0038,
+      "on intervention 13": 0.166247,
+      "on intervention 14": 0.166247,
+      "on intervention 15": 0.166247,
+      "on intervention 16": 0.0038,
+      "on intervention 17": 0.166247
+    },
+    "daily mortality prob for >=60y while critical": {
+      "on intervention 0": 0.203297,
+      "on intervention 1": 0.203297,
+      "on intervention 2": 0.05,
+      "on intervention 3": 0.203297,
+      "on intervention 4": 0.203297,
+      "on intervention 5": 0.05,
+      "on intervention 6": 0.203297,
+      "on intervention 7": 0.203297,
+      "on intervention 8": 0.05,
+      "on intervention 9": 0.203297,
+      "on intervention 10": 0.203297,
+      "on intervention 11": 0.203297,
+      "on intervention 12": 0.05,
+      "on intervention 13": 0.203297,
+      "on intervention 14": 0.203297,
+      "on intervention 15": 0.203297,
+      "on intervention 16": 0.05,
+      "on intervention 17": 0.203297
+    }
+  },
+  "immunity": {
+    "vaccination to be given (-1 for no vaccine)": {
+      "for intervention 0": -1,
+      "for intervention 1": -1,
+      "for intervention 2": -1,
+      "for intervention 3": -1,
+      "for intervention 4": -1,
+      "for intervention 5": -1,
+      "for intervention 6": -1,
+      "for intervention 7": -1,
+      "for intervention 8": -1,
+      "for intervention 9": 0,
+      "for intervention 10": -1,
+      "for intervention 11": -1,
+      "for intervention 12": -1,
+      "for intervention 13": 1,
+      "for intervention 14": -1,
+      "for intervention 15": -1,
+      "for intervention 16": -1,
+      "for intervention 17": -1
+    },
+    "immunity parameters for recovered": {
+      "initial prob full immunity": {
+        "for 0-19y": 1,
+        "for 20-59y": 1,
+        "for >=60y": 1
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 0.299342,
+          "mild/moderate": 0.697833,
+          "severe": 0.002495,
+          "critical": 0.00033
+        },
+        "for 20-59y": {
+          "asymptomatic": 0.179,
+          "mild/moderate": 0.803755,
+          "severe": 0.007952,
+          "critical": 0.009293
+        },
+        "for >=60y": {
+          "asymptomatic": 0.171045,
+          "mild/moderate": 0.76374,
+          "severe": 0.013583,
+          "critical": 0.051632
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    },
+    "immunity parameters for vaccine_0": {
+      "initial prob full immunity": {
+        "for 0-19y": 0.0,
+        "for 20-59y": 0.54294118,
+        "for >=60y": 0.54294118
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 1.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0
+        },
+        "for 20-59y": {
+          "asymptomatic": 0.23288803,
+          "mild/moderate": 0.76063122,
+          "severe": 0.0029884,
+          "critical": 0.00349235
+        },
+        "for >=60y": {
+          "asymptomatic": 0.22545518,
+          "mild/moderate": 0.75003674,
+          "severe": 0.00510455,
+          "critical": 0.01940353
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    },
+    "immunity parameters for vaccine_1": {
+      "initial prob full immunity": {
+        "for 0-19y": 0.0,
+        "for 20-59y": 0.15494978,
+        "for >=60y": 0.15494978
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 1.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0
+        },
+        "for 20-59y": {
+          "asymptomatic": 0.25663965,
+          "mild/moderate": 0.73914237,
+          "severe": 0.00194499,
+          "critical": 0.00227299
+        },
+        "for >=60y": {
+          "asymptomatic": 0.24943692,
+          "mild/moderate": 0.73461202,
+          "severe": 0.00332229,
+          "critical": 0.01262877
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    },
+    "immunity parameters for vaccine_2": {
+      "initial prob full immunity": {
+        "for 0-19y": 1,
+        "for 20-59y": 1,
+        "for >=60y": 1
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for 20-59y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for >=60y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    },
+    "immunity parameters for vaccine_3": {
+      "initial prob full immunity": {
+        "for 0-19y": 1,
+        "for 20-59y": 1,
+        "for >=60y": 1
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for 20-59y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for >=60y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    },
+    "immunity parameters for vaccine_4": {
+      "initial prob full immunity": {
+        "for 0-19y": 1,
+        "for 20-59y": 1,
+        "for >=60y": 1
+      },
+      "daily prob loss full immunity": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "partial immunity severity dist": {
+        "for 0-19y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for 20-59y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        },
+        "for >=60y": {
+          "asymptomatic": 1,
+          "mild/moderate": 0,
+          "severe": 0,
+          "critical": 0
+        }
+      },
+      "partial immunity transmission rate multiplier": 1
+    }
+  },
+  "transmissions": {
+    "intervention 0": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 1": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 2": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 3": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 4": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 5": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 6": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 7": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 8": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 9": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 10": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 11": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 12": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 13": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 14": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 15": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 16": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "intervention 17": {
+      "transmission probability per exposure": {
+        "for tn_group 0": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 1": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 2": {
+          "while asymptomatic": 0.2394,
+          "while mild/moderate": 0.1948,
+          "while severe": 0.0136,
+          "while critical": 0.0108,
+          "while recuperation": 0.0136
+        },
+        "for tn_group 3": {
+          "while asymptomatic": 0,
+          "while mild/moderate": 0,
+          "while severe": 0,
+          "while critical": 0,
+          "while recuperation": 0
+        }
+      },
+      "transmission rate multipliers": {
+        "for 0 <= day# < t0": 0.7762745195830235,
+        "for t0 <= day# < t1": 1,
+        "for t1 <= day# < t2": 1,
+        "for t2 <= day# < t3": 1,
+        "day# > t3": 1
+      },
+      "exposure matrix": {
+        "from tn_group 0": {
+          "to tn_group 0": 0.3668104,
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 1": {
+          "to tn_group 1": 0.54292588,
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 2": {
+          "to tn_group 2": 0.09026372,
+          "to tn_group 3": 0
+        },
+        "from tn_group 3": {
+          "to tn_group 3": 0
+        }
+      }
+    },
+    "transmission multiplier time thresholds": {
+      "t0": 10010,
+      "t1": 10020,
+      "t2": 10030,
+      "t3": 10040
+    }
+  },
+  "tests": {
+    "symptom screen result return time": 0,
+    "probability of positive symptom screen result": {
+      "if no symptoms": 1.0,
+      "if mild/moderate": 1.0,
+      "if severe": 1.0,
+      "if critical": 1.0,
+      "if recuperation": 1.0
+    },
+    "test availability thresholds": {
+      "t0": 14.0,
+      "t1": 137.0,
+      "t2": 246.0,
+      "t3": 246.0
+    },
+    "daily test availabilities": {
+      "for 0 <= day# < t0": {
+        "test 0": 0,
+        "test 1": 0,
+        "test 2": 0,
+        "test 3": 2000000,
+        "test 4": 2000000,
+        "test 5": 2000000,
+        "test 6": 2000000,
+        "test 7": 2000000
+      },
+      "for t0 <= day# < t1": {
+        "test 0": 626.0,
+        "test 1": 0,
+        "test 2": 0,
+        "test 3": 3000000,
+        "test 4": 2000000,
+        "test 5": 2000000,
+        "test 6": 2000000,
+        "test 7": 2000000
+      },
+      "for t1 <= day# < t2": {
+        "test 0": 0,
+        "test 1": 626.0,
+        "test 2": 0,
+        "test 3": 2000000,
+        "test 4": 2000000,
+        "test 5": 2000000,
+        "test 6": 2000000,
+        "test 7": 2000000
+      },
+      "for t2 <= day# < t3": {
+        "test 0": 0,
+        "test 1": 0,
+        "test 2": 0.0,
+        "test 3": 2000000,
+        "test 4": 2000000,
+        "test 5": 2000000,
+        "test 6": 2000000,
+        "test 7": 2000000
+      },
+      "day# > t3": {
+        "test 0": 0,
+        "test 1": 0,
+        "test 2": 0,
+        "test 3": 2000000,
+        "test 4": 2000000,
+        "test 5": 2000000,
+        "test 6": 2000000,
+        "test 7": 2000000
+      }
+    },
+    "test 0": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 1": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 2": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 3": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 21
+    },
+    "test 4": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 5": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 6": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    },
+    "test 7": {
+      "result return time": 0,
+      "probability of positive result": {
+        "never infected": 1.0,
+        "1 <= time_infected < t0": 1.0,
+        "t0 <= time_infected < t1": 1.0,
+        "t1 <= time_infected < t2": 1.0,
+        "t2 <= time_infected < t3": 1.0,
+        "time_infected >= t3": 1.0
+      },
+      "sensitivity thresholds": {
+        "t0": 5,
+        "t1": 10,
+        "t2": 15,
+        "t3": 20
+      },
+      "delay to test": 0
+    }
+  },
+  "testing strategies": {
+    "intervention 0": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 0,
+        "if mild/moderate": 0,
+        "if severe": 1,
+        "if critical": 2,
+        "if recuperation": 1
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 0,
+        "if mild/moderate": 0,
+        "if severe": 0,
+        "if critical": 0,
+        "if recuperation": 0
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 9,
+        "if observed mild/moderate": 9,
+        "if observed severe": 1,
+        "if observed critical": 2,
+        "if observed recuperation": 1
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "test number": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      }
+    },
+    "intervention 1": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 0,
+        "if mild/moderate": 0,
+        "if severe": 1,
+        "if critical": 2,
+        "if recuperation": 1
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 2": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 0,
+        "if mild/moderate": 0,
+        "if severe": 1,
+        "if critical": 2,
+        "if recuperation": 1
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 2,
+        "if mild/moderate": 2,
+        "if severe": 2,
+        "if critical": 2,
+        "if recuperation": 2
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 2,
+        "if observed mild/moderate": 2,
+        "if observed severe": 2,
+        "if observed critical": 2,
+        "if observed recuperation": 2
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 2,
+        "if observed mild/moderate": 2,
+        "if observed severe": 2,
+        "if observed critical": 2,
+        "if observed recuperation": 2
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 3": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 3,
+        "if mild/moderate": 3,
+        "if severe": 4,
+        "if critical": 5,
+        "if recuperation": 4
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 3,
+        "if mild/moderate": 3,
+        "if severe": 3,
+        "if critical": 3,
+        "if recuperation": 3
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 9,
+        "if observed mild/moderate": 9,
+        "if observed severe": 4,
+        "if observed critical": 5,
+        "if observed recuperation": 4
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 3,
+        "if observed mild/moderate": 3,
+        "if observed severe": 3,
+        "if observed critical": 3,
+        "if observed recuperation": 3
+      },
+      "test number": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      }
+    },
+    "intervention 4": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 3,
+        "if mild/moderate": 3,
+        "if severe": 4,
+        "if critical": 5,
+        "if recuperation": 4
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 4,
+        "if mild/moderate": 4,
+        "if severe": 4,
+        "if critical": 4,
+        "if recuperation": 4
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 5": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 3,
+        "if mild/moderate": 3,
+        "if severe": 4,
+        "if critical": 5,
+        "if recuperation": 4
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 5,
+        "if mild/moderate": 5,
+        "if severe": 5,
+        "if critical": 5,
+        "if recuperation": 5
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 5,
+        "if observed mild/moderate": 5,
+        "if observed severe": 5,
+        "if observed critical": 5,
+        "if observed recuperation": 5
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 5,
+        "if observed mild/moderate": 5,
+        "if observed severe": 5,
+        "if observed critical": 5,
+        "if observed recuperation": 5
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 6": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 6,
+        "if mild/moderate": 6,
+        "if severe": 7,
+        "if critical": 8,
+        "if recuperation": 7
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 6,
+        "if mild/moderate": 6,
+        "if severe": 6,
+        "if critical": 6,
+        "if recuperation": 6
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 9,
+        "if observed mild/moderate": 9,
+        "if observed severe": 7,
+        "if observed critical": 8,
+        "if observed recuperation": 7
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 6,
+        "if observed mild/moderate": 6,
+        "if observed severe": 6,
+        "if observed critical": 6,
+        "if observed recuperation": 6
+      },
+      "test number": {
+        "if observed no symptoms": 2,
+        "if observed mild/moderate": 2,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      }
+    },
+    "intervention 7": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 6,
+        "if mild/moderate": 6,
+        "if severe": 7,
+        "if critical": 8,
+        "if recuperation": 7
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 7,
+        "if mild/moderate": 7,
+        "if severe": 7,
+        "if critical": 7,
+        "if recuperation": 7
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 7,
+        "if observed mild/moderate": 7,
+        "if observed severe": 7,
+        "if observed critical": 7,
+        "if observed recuperation": 7
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 7,
+        "if observed mild/moderate": 7,
+        "if observed severe": 7,
+        "if observed critical": 7,
+        "if observed recuperation": 7
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 8": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 6,
+        "if mild/moderate": 6,
+        "if severe": 7,
+        "if critical": 8,
+        "if recuperation": 7
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 8,
+        "if mild/moderate": 8,
+        "if severe": 8,
+        "if critical": 8,
+        "if recuperation": 8
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 8,
+        "if observed mild/moderate": 8,
+        "if observed severe": 8,
+        "if observed critical": 8,
+        "if observed recuperation": 8
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 8,
+        "if observed mild/moderate": 8,
+        "if observed severe": 8,
+        "if observed critical": 8,
+        "if observed recuperation": 8
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 9": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 10,
+        "if mild/moderate": 10,
+        "if severe": 10,
+        "if critical": 10,
+        "if recuperation": 10
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 9,
+        "if mild/moderate": 9,
+        "if severe": 9,
+        "if critical": 9,
+        "if recuperation": 9
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 9,
+        "if observed mild/moderate": 9,
+        "if observed severe": 9,
+        "if observed critical": 9,
+        "if observed recuperation": 9
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 9,
+        "if observed mild/moderate": 9,
+        "if observed severe": 9,
+        "if observed critical": 9,
+        "if observed recuperation": 9
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 10": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 10,
+        "if mild/moderate": 10,
+        "if severe": 11,
+        "if critical": 12,
+        "if recuperation": 11
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 10,
+        "if mild/moderate": 10,
+        "if severe": 10,
+        "if critical": 10,
+        "if recuperation": 10
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 13,
+        "if observed mild/moderate": 13,
+        "if observed severe": 11,
+        "if observed critical": 12,
+        "if observed recuperation": 11
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 10,
+        "if observed mild/moderate": 10,
+        "if observed severe": 10,
+        "if observed critical": 10,
+        "if observed recuperation": 10
+      },
+      "test number": {
+        "if observed no symptoms": 3,
+        "if observed mild/moderate": 3,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      }
+    },
+    "intervention 11": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 10,
+        "if mild/moderate": 10,
+        "if severe": 11,
+        "if critical": 12,
+        "if recuperation": 11
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 11,
+        "if mild/moderate": 11,
+        "if severe": 11,
+        "if critical": 11,
+        "if recuperation": 11
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 11,
+        "if observed mild/moderate": 11,
+        "if observed severe": 11,
+        "if observed critical": 11,
+        "if observed recuperation": 11
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 11,
+        "if observed mild/moderate": 11,
+        "if observed severe": 11,
+        "if observed critical": 11,
+        "if observed recuperation": 11
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 12": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 10,
+        "if mild/moderate": 10,
+        "if severe": 11,
+        "if critical": 12,
+        "if recuperation": 11
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 12,
+        "if mild/moderate": 12,
+        "if severe": 12,
+        "if critical": 12,
+        "if recuperation": 12
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 12,
+        "if observed mild/moderate": 12,
+        "if observed severe": 12,
+        "if observed critical": 12,
+        "if observed recuperation": 12
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 12,
+        "if observed mild/moderate": 12,
+        "if observed severe": 12,
+        "if observed critical": 12,
+        "if observed recuperation": 12
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 13": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 14,
+        "if mild/moderate": 14,
+        "if severe": 14,
+        "if critical": 14,
+        "if recuperation": 14
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 13,
+        "if mild/moderate": 13,
+        "if severe": 13,
+        "if critical": 13,
+        "if recuperation": 13
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 0,
+        "while pre-infectious incubation": 0,
+        "while asymptomatic": 0,
+        "while mild/moderate": 0,
+        "while severe": 0,
+        "while critical": 0,
+        "while recuperation": 0,
+        "while immune": 0
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 13,
+        "if observed mild/moderate": 13,
+        "if observed severe": 13,
+        "if observed critical": 13,
+        "if observed recuperation": 13
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 13,
+        "if observed mild/moderate": 13,
+        "if observed severe": 13,
+        "if observed critical": 13,
+        "if observed recuperation": 13
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 14": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 14,
+        "if mild/moderate": 14,
+        "if severe": 15,
+        "if critical": 16,
+        "if recuperation": 15
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 14,
+        "if mild/moderate": 14,
+        "if severe": 14,
+        "if critical": 14,
+        "if recuperation": 14
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 14,
+        "if observed mild/moderate": 14,
+        "if observed severe": 15,
+        "if observed critical": 16,
+        "if observed recuperation": 15
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 14,
+        "if observed mild/moderate": 14,
+        "if observed severe": 14,
+        "if observed critical": 14,
+        "if observed recuperation": 14
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if observed recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      }
+    },
+    "intervention 15": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 14,
+        "if mild/moderate": 14,
+        "if severe": 15,
+        "if critical": 16,
+        "if recuperation": 15
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 15,
+        "if mild/moderate": 15,
+        "if severe": 15,
+        "if critical": 15,
+        "if recuperation": 15
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 15,
+        "if observed mild/moderate": 15,
+        "if observed severe": 15,
+        "if observed critical": 15,
+        "if observed recuperation": 15
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 15,
+        "if observed mild/moderate": 15,
+        "if observed severe": 15,
+        "if observed critical": 15,
+        "if observed recuperation": 15
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 16": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 14,
+        "if mild/moderate": 14,
+        "if severe": 15,
+        "if critical": 16,
+        "if recuperation": 15
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 16,
+        "if mild/moderate": 16,
+        "if severe": 16,
+        "if critical": 16,
+        "if recuperation": 16
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if mild/moderate": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if severe": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if critical": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        },
+        "if recuperation": {
+          "for 0-19y": 1,
+          "for 20-59y": 1,
+          "for >=60y": 1
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 1,
+        "while pre-infectious incubation": 1,
+        "while asymptomatic": 1,
+        "while mild/moderate": 1,
+        "while severe": 1,
+        "while critical": 1,
+        "while recuperation": 1,
+        "while immune": 1
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 16,
+        "if observed mild/moderate": 16,
+        "if observed severe": 16,
+        "if observed critical": 16,
+        "if observed recuperation": 16
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 16,
+        "if observed mild/moderate": 16,
+        "if observed severe": 16,
+        "if observed critical": 16,
+        "if observed recuperation": 16
+      },
+      "test number": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    },
+    "intervention 17": {
+      "switch to intervention on positive symptom screen result": {
+        "if no symptoms": 17,
+        "if mild/moderate": 17,
+        "if severe": 17,
+        "if critical": 17,
+        "if recuperation": 17
+      },
+      "switch to intervention on negative symptom screen result": {
+        "if no symptoms": 17,
+        "if mild/moderate": 17,
+        "if severe": 17,
+        "if critical": 17,
+        "if recuperation": 17
+      },
+      "screening interval": {
+        "if no symptoms": 1,
+        "if mild/moderate": 1,
+        "if severe": 1,
+        "if critical": 1,
+        "if recuperation": 1
+      },
+      "probability receive symptom screen": {
+        "if no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      },
+      "probability receive confirmatory test": 0,
+      "delay to confirmatory test": 0,
+      "probability of presenting to care": {
+        "while susceptible": 0,
+        "while pre-infectious incubation": 0,
+        "while asymptomatic": 0,
+        "while mild/moderate": 0,
+        "while severe": 0,
+        "while critical": 0,
+        "while recuperation": 0,
+        "while immune": 0
+      },
+      "switch to intervention on positive test result": {
+        "if observed no symptoms": 17,
+        "if observed mild/moderate": 17,
+        "if observed severe": 17,
+        "if observed critical": 17,
+        "if observed recuperation": 17
+      },
+      "switch to intervention on negative test result": {
+        "if observed no symptoms": 17,
+        "if observed mild/moderate": 17,
+        "if observed severe": 17,
+        "if observed critical": 17,
+        "if observed recuperation": 17
+      },
+      "test number": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "testing interval": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "probability receive test": {
+        "if observed no symptoms": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed mild/moderate": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed severe": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed critical": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        },
+        "if observed recuperation": {
+          "for 0-19y": 0,
+          "for 20-59y": 0,
+          "for >=60y": 0
+        }
+      }
+    }
+  },
+  "costs": {
+    "screening cost": {
+      "if no symptoms": 0.0,
+      "if mild/moderate": 0.0,
+      "if severe": 0.0,
+      "if critical": 0.0,
+      "if recuperation": 0.0
+    },
+    "testing costs": {
+      "test 0": 0.0,
+      "test 1": 0.0,
+      "test 2": 0.0,
+      "test 3": 0.0,
+      "test 4": 0.0,
+      "test 5": 0.0,
+      "test 6": 0.0,
+      "test 7": 0.0
+    },
+    "daily intervention costs": {
+      "intervention 0": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 1": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 2": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 3": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 4": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 5": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 6": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 7": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 8": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 9": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 10": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 11": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 12": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 13": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 14": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 15": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 16": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      },
+      "intervention 17": {
+        "if observed no symptoms": 0.0,
+        "if observed mild/moderate": 0.0,
+        "if observed severe": 0.0,
+        "if observed critical": 0.0,
+        "if observed recuperation": 0.0
+      }
+    },
+    "mortality costs": {
+      "intervention 0": 0.0,
+      "intervention 1": 0.0,
+      "intervention 2": 0.0,
+      "intervention 3": 0.0,
+      "intervention 4": 0.0,
+      "intervention 5": 0.0,
+      "intervention 6": 0.0,
+      "intervention 7": 0.0,
+      "intervention 8": 0.0,
+      "intervention 9": 0.0,
+      "intervention 10": 0.0,
+      "intervention 11": 0.0,
+      "intervention 12": 0.0,
+      "intervention 13": 0.0,
+      "intervention 14": 0.0,
+      "intervention 15": 0.0,
+      "intervention 16": 0.0,
+      "intervention 17": 0.0
+    }
+  },
+  "resources": {
+    "resource availability thresholds": {
+      "t0": 10000,
+      "t1": 10010,
+      "t2": 10020,
+      "t3": 10030
+    },
+    "resource availabilities": {
+      "for 0 <= day# < t0": {
+        "resource 0": 0,
+        "resource 1": 2032.0,
+        "resource 2": 56.0,
+        "resource 3": 0,
+        "resource 4": 0,
+        "resource 5": 0,
+        "resource 6": 0,
+        "resource 7": 0
+      },
+      "for t0 <= day# < t1": {
+        "resource 0": 0,
+        "resource 1": 0,
+        "resource 2": 0,
+        "resource 3": 0,
+        "resource 4": 0,
+        "resource 5": 0,
+        "resource 6": 0,
+        "resource 7": 0
+      },
+      "for t1 <= day# < t2": {
+        "resource 0": 0,
+        "resource 1": 0,
+        "resource 2": 0,
+        "resource 3": 0,
+        "resource 4": 0,
+        "resource 5": 0,
+        "resource 6": 0,
+        "resource 7": 0
+      },
+      "for t2 <= day# < t3": {
+        "resource 0": 0,
+        "resource 1": 0,
+        "resource 2": 0,
+        "resource 3": 0,
+        "resource 4": 0,
+        "resource 5": 0,
+        "resource 6": 0,
+        "resource 7": 0
+      },
+      "day# > t3": {
+        "resource 0": 0,
+        "resource 1": 0,
+        "resource 2": 0,
+        "resource 3": 0,
+        "resource 4": 0,
+        "resource 5": 0,
+        "resource 6": 0,
+        "resource 7": 0
+      }
+    },
+    "resource requirements": {
+      "for intervention 0": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 1": {
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
+      },
+      "for intervention 2": {
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
+      },
+      "for intervention 3": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 4": {
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
+      },
+      "for intervention 5": {
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
+      },
+      "for intervention 6": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 7": {
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
+      },
+      "for intervention 8": {
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
+      },
+      "for intervention 9": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 10": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 11": {
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
+      },
+      "for intervention 12": {
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
+      },
+      "for intervention 13": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 14": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      },
+      "for intervention 15": {
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
+      },
+      "for intervention 16": {
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
+      },
+      "for intervention 17": {
+        "if observed no symptoms": [],
+        "if observed mild/moderate": [],
+        "if observed severe": [],
+        "if observed critical": [],
+        "if observed recuperation": []
+      }
+    },
+    "back-up interventions": {
+      "for intervention 0": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 1": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 2": {
+        "if observed no symptoms": 1,
+        "if observed mild/moderate": 1,
+        "if observed severe": 1,
+        "if observed critical": 1,
+        "if observed recuperation": 1
+      },
+      "for intervention 3": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 4": {
+        "if observed no symptoms": 3,
+        "if observed mild/moderate": 3,
+        "if observed severe": 3,
+        "if observed critical": 3,
+        "if observed recuperation": 3
+      },
+      "for intervention 5": {
+        "if observed no symptoms": 4,
+        "if observed mild/moderate": 4,
+        "if observed severe": 4,
+        "if observed critical": 4,
+        "if observed recuperation": 4
+      },
+      "for intervention 6": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 7": {
+        "if observed no symptoms": 6,
+        "if observed mild/moderate": 6,
+        "if observed severe": 6,
+        "if observed critical": 6,
+        "if observed recuperation": 6
+      },
+      "for intervention 8": {
+        "if observed no symptoms": 7,
+        "if observed mild/moderate": 7,
+        "if observed severe": 7,
+        "if observed critical": 7,
+        "if observed recuperation": 7
+      },
+      "for intervention 9": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 10": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 11": {
+        "if observed no symptoms": 10,
+        "if observed mild/moderate": 10,
+        "if observed severe": 10,
+        "if observed critical": 10,
+        "if observed recuperation": 10
+      },
+      "for intervention 12": {
+        "if observed no symptoms": 11,
+        "if observed mild/moderate": 11,
+        "if observed severe": 11,
+        "if observed critical": 11,
+        "if observed recuperation": 11
+      },
+      "for intervention 13": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 14": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      },
+      "for intervention 15": {
+        "if observed no symptoms": 14,
+        "if observed mild/moderate": 14,
+        "if observed severe": 14,
+        "if observed critical": 14,
+        "if observed recuperation": 14
+      },
+      "for intervention 16": {
+        "if observed no symptoms": 15,
+        "if observed mild/moderate": 15,
+        "if observed severe": 15,
+        "if observed critical": 15,
+        "if observed recuperation": 15
+      },
+      "for intervention 17": {
+        "if observed no symptoms": 0,
+        "if observed mild/moderate": 0,
+        "if observed severe": 0,
+        "if observed critical": 0,
+        "if observed recuperation": 0
+      }
+    }
+  },
+  "non-covid illness": {
+    "daily prob present non-covid": {
+      "with mild/moderate symptoms": {
+        "for 0-19y": 0.0,
+        "for 20-59y": 0.0,
+        "for >=60y": 0.0
+      },
+      "with severe symptoms": {
+        "for 0-19y": 0.0,
+        "for 20-59y": 0.0,
+        "for >=60y": 0.0
+      },
+      "with critical symptoms": {
+        "for 0-19y": 0.0,
+        "for 20-59y": 0.0,
+        "for >=60y": 0.0
+      }
+    },
+    "non covid symptom duration": {
+      "for mild/moderate symptoms": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "for severe symptoms": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      },
+      "for critical symptoms": {
+        "for 0-19y": 0,
+        "for 20-59y": 0,
+        "for >=60y": 0
+      }
+    }
+  },
+  "Prophyaxis": {
+    "enable prophylaxis module": false,
+    "prophylaxis efficacy": 1,
+    "target coverage": 1,
+    "initial coverage": 0,
+    "time of target coverage": 20,
+    "probability of dropout time thresholds": {
+      "t0": 10,
+      "t1": 20
+    },
+    "probability of dropout": {
+      "for 0 <= day# < t0": 0,
+      "for t0 <= day# < t1": 0,
+      "day# > t1": 0
+    }
+  }
+}
