@@ -282,7 +282,7 @@ def transmission_multipliers(infile,strat_row):
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t0 <= day# < t1'] = strat_row['first.surge.transmission.multiplier']
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t1 <= day# < t2'] = strat_row['baseline.transmission.multiplier']
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t2 <= day# < t3'] = strat_row['second.surge.transmission.multiplier']
-        infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for day# > t3'] = strat_row['baseline.transmission.multiplier']
+        infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['day# > t3'] = strat_row['baseline.transmission.multiplier']
 
     return(infile)
 
@@ -311,7 +311,7 @@ def write_vector_to_dict(labels,values):
 
 pwd=os.getcwd()
 
-name = 'test_run_2021-06-08'
+name = 'test_run_2021-06-08_500k'
 run_list_path = os.path.join(pwd,'run_dictionary',name+'.xlsx')
 outfolder = os.path.join(pwd,name) # Filepath for output
 
