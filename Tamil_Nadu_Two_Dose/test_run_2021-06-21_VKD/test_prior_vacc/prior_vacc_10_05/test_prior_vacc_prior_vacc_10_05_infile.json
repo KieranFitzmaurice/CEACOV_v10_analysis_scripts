@@ -1,7 +1,7 @@
 {
   "model version": "v0.10",
   "simulation parameters": {
-    "cohort size": 150000,
+    "cohort size": 100000,
     "time horizon": 540,
     "fixed seed": true,
     "detailed state outputs": true,
@@ -10,9 +10,9 @@
   "initial state": {
     "transmission group dist": {
       "tn_group 0": 0.32271396,
-      "tn_group 1": 0.57309993,
-      "tn_group 2": 0.10418611,
-      "tn_group 3": 0
+      "tn_group 1": 0.54444493,
+      "tn_group 2": 0.0937675,
+      "tn_group 3": 0.03907361
     },
     "risk category dist": {
       "for tn_group 0": {
@@ -31,15 +31,15 @@
         ">=60y": 1.0
       },
       "for tn_group 3": {
-        "0-19y": 1,
-        "20-59y": 0,
-        ">=60y": 0
+        "0-19y": 0.0,
+        "20-59y": 0.73335938,
+        ">=60y": 0.26664062
       }
     },
     "immune states dist": {
       "for tn_group 0": {
-        "naive": 0.7,
-        "recovered": 0.3,
+        "naive": 0.685,
+        "recovered": 0.315,
         "vaccine_0": 0,
         "vaccine_1": 0,
         "vaccine_2": 0,
@@ -47,8 +47,8 @@
         "vaccine_4": 0
       },
       "for tn_group 1": {
-        "naive": 0.7,
-        "recovered": 0.3,
+        "naive": 0.685,
+        "recovered": 0.315,
         "vaccine_0": 0,
         "vaccine_1": 0,
         "vaccine_2": 0,
@@ -56,8 +56,8 @@
         "vaccine_4": 0
       },
       "for tn_group 2": {
-        "naive": 0.7,
-        "recovered": 0.3,
+        "naive": 0.685,
+        "recovered": 0.315,
         "vaccine_0": 0,
         "vaccine_1": 0,
         "vaccine_2": 0,
@@ -68,7 +68,7 @@
         "naive": 0,
         "recovered": 0,
         "vaccine_0": 0,
-        "vaccine_1": 0,
+        "vaccine_1": 1.0,
         "vaccine_2": 0,
         "vaccine_3": 0,
         "vaccine_4": 0
@@ -77,24 +77,24 @@
     "initial disease dist": {
       "for tn_group 0": {
         "for naive": {
-          "susceptible": 0.999,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0
+          "susceptible": 0.99854015,
+          "pre-infectious incubation": 0.00021898,
+          "asymptomatic": 0.00058394,
+          "mild/moderate": 0.00065547,
+          "severe": 7.3e-07,
+          "critical": 7.3e-07,
+          "recuperation": 0.0,
+          "immune": 0.0
         },
         "for recovered": {
           "susceptible": 0.0,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0.999
+          "pre-infectious incubation": 0.0,
+          "asymptomatic": 0.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0,
+          "recuperation": 0.0,
+          "immune": 1.0
         },
         "for vaccine_0": {
           "susceptible": 1,
@@ -149,24 +149,24 @@
       },
       "for tn_group 1": {
         "for naive": {
-          "susceptible": 0.999,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0
+          "susceptible": 0.99854015,
+          "pre-infectious incubation": 0.00021898,
+          "asymptomatic": 0.00058394,
+          "mild/moderate": 0.00065547,
+          "severe": 7.3e-07,
+          "critical": 7.3e-07,
+          "recuperation": 0.0,
+          "immune": 0.0
         },
         "for recovered": {
           "susceptible": 0.0,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0.999
+          "pre-infectious incubation": 0.0,
+          "asymptomatic": 0.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0,
+          "recuperation": 0.0,
+          "immune": 1.0
         },
         "for vaccine_0": {
           "susceptible": 1,
@@ -221,24 +221,24 @@
       },
       "for tn_group 2": {
         "for naive": {
-          "susceptible": 0.999,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0
+          "susceptible": 0.99854015,
+          "pre-infectious incubation": 0.00021898,
+          "asymptomatic": 0.00058394,
+          "mild/moderate": 0.00065547,
+          "severe": 7.3e-07,
+          "critical": 7.3e-07,
+          "recuperation": 0.0,
+          "immune": 0.0
         },
         "for recovered": {
           "susceptible": 0.0,
-          "pre-infectious incubation": 0.00015,
-          "asymptomatic": 0.0004,
-          "mild/moderate": 0.000449,
-          "severe": 5e-07,
-          "critical": 5e-07,
-          "recuperation": 0,
-          "immune": 0.999
+          "pre-infectious incubation": 0.0,
+          "asymptomatic": 0.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0,
+          "recuperation": 0.0,
+          "immune": 1.0
         },
         "for vaccine_0": {
           "susceptible": 1,
@@ -323,14 +323,14 @@
           "immune": 0
         },
         "for vaccine_1": {
-          "susceptible": 1,
-          "pre-infectious incubation": 0,
-          "asymptomatic": 0,
-          "mild/moderate": 0,
-          "severe": 0,
-          "critical": 0,
-          "recuperation": 0,
-          "immune": 0
+          "susceptible": 0.34604843,
+          "pre-infectious incubation": 0.0,
+          "asymptomatic": 0.0,
+          "mild/moderate": 0.0,
+          "severe": 0.0,
+          "critical": 0.0,
+          "recuperation": 0.0,
+          "immune": 0.65395157
         },
         "for vaccine_2": {
           "susceptible": 1,
@@ -1573,9 +1573,9 @@
     },
     "immunity parameters for vaccine_0": {
       "initial prob full immunity": {
-        "for 0-19y": 0.2,
-        "for 20-59y": 0.2,
-        "for >=60y": 0.2
+        "for 0-19y": 0.63458,
+        "for 20-59y": 0.63458,
+        "for >=60y": 0.63458
       },
       "daily prob loss full immunity": {
         "for 0-19y": 0,
@@ -1584,31 +1584,31 @@
       },
       "partial immunity severity dist": {
         "for 0-19y": {
-          "asymptomatic": 0.35189135,
-          "mild/moderate": 0.64598990,
-          "severe": 0.00187125,
-          "critical": 0.00024750
+          "asymptomatic": 0.52971817,
+          "mild/moderate": 0.46936867,
+          "severe": 0.00080649,
+          "critical": 0.00010667
         },
         "for 20-59y": {
-          "asymptomatic": 0.24057500,
-          "mild/moderate": 0.74649125,
-          "severe": 0.00596400,
-          "critical": 0.00696975
+          "asymptomatic": 0.44894458,
+          "mild/moderate": 0.54548106,
+          "severe": 0.00257044,
+          "critical": 0.00300392
         },
         "for >=60y": {
-          "asymptomatic": 0.23321663,
-          "mild/moderate": 0.71787213,
-          "severe": 0.01018725,
-          "critical": 0.03872399
+          "asymptomatic": 0.44360519,
+          "mild/moderate": 0.53531442,
+          "severe": 0.00439063,
+          "critical": 0.01668976
         }
       },
       "partial immunity transmission rate multiplier": 1
     },
     "immunity parameters for vaccine_1": {
       "initial prob full immunity": {
-        "for 0-19y": 0.0,
-        "for 20-59y": 0.0,
-        "for >=60y": 0.25
+        "for 0-19y": 0.0530118,
+        "for 20-59y": 0.0530118,
+        "for >=60y": 0.0530118
       },
       "daily prob loss full immunity": {
         "for 0-19y": 0,
@@ -1617,22 +1617,22 @@
       },
       "partial immunity severity dist": {
         "for 0-19y": {
-          "asymptomatic": 0.35189135,
-          "mild/moderate": 0.64598990,
-          "severe": 0.00187125,
-          "critical": 0.00024750
+          "asymptomatic": 0.61030397,
+          "mild/moderate": 0.38924015,
+          "severe": 0.00040263,
+          "critical": 5.325e-05
         },
         "for 20-59y": {
-          "asymptomatic": 0.24057500,
-          "mild/moderate": 0.74649125,
-          "severe": 0.00596400,
-          "critical": 0.00696975
+          "asymptomatic": 0.54337145,
+          "mild/moderate": 0.45384566,
+          "severe": 0.00128324,
+          "critical": 0.00149965
         },
         "for >=60y": {
-          "asymptomatic": 0.33683600,
-          "mild/moderate": 0.64142567,
-          "severe": 0.00452767,
-          "critical": 0.01721066
+          "asymptomatic": 0.538947,
+          "mild/moderate": 0.45052903,
+          "severe": 0.00219194,
+          "critical": 0.00833203
         }
       },
       "partial immunity transmission rate multiplier": 1
@@ -1770,30 +1770,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -1829,30 +1829,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -1888,30 +1888,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -1947,30 +1947,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2006,30 +2006,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2065,30 +2065,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2124,30 +2124,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2183,30 +2183,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2242,30 +2242,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2301,30 +2301,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2360,30 +2360,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2419,30 +2419,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2478,30 +2478,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2537,30 +2537,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2596,30 +2596,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2655,30 +2655,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2714,30 +2714,30 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
@@ -2773,38 +2773,38 @@
         }
       },
       "transmission rate multipliers": {
-        "for 0 <= day# < t0": 0.77627452,
-        "for t0 <= day# < t1": 1,
-        "for t1 <= day# < t2": 1,
-        "for t2 <= day# < t3": 1,
-        "day# > t3": 1
+        "for 0 <= day# < t0": 0.622396,
+        "for t0 <= day# < t1": 0.933594,
+        "for t1 <= day# < t2": 0.622396,
+        "for t2 <= day# < t3": 0.933594,
+        "day# > t3": 0.622396
       },
       "exposure matrix": {
         "from tn_group 0": {
           "to tn_group 0": 0.32271396,
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 1": {
-          "to tn_group 1": 0.57309993,
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 1": 0.54444493,
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 2": {
-          "to tn_group 2": 0.10418611,
-          "to tn_group 3": 0
+          "to tn_group 2": 0.0937675,
+          "to tn_group 3": 0.03907361
         },
         "from tn_group 3": {
-          "to tn_group 3": 0
+          "to tn_group 3": 0.03907361
         }
       }
     },
     "transmission multiplier time thresholds": {
-      "t0": 10010,
-      "t1": 10020,
-      "t2": 10030,
-      "t3": 10040
+      "t0": 30,
+      "t1": 90,
+      "t2": 270,
+      "t3": 330
     }
   },
   "tests": {
@@ -2817,10 +2817,10 @@
       "if recuperation": 1.0
     },
     "test availability thresholds": {
-      "t0": 14,
-      "t1": 38,
-      "t2": 181,
-      "t3": 277
+      "t0": 30.0,
+      "t1": 36.0,
+      "t2": 72.0,
+      "t3": 94.0
     },
     "daily test availabilities": {
       "for 0 <= day# < t0": {
@@ -2834,7 +2834,7 @@
         "test 7": 2000000
       },
       "for t0 <= day# < t1": {
-        "test 0": 0,
+        "test 0": 1000.0,
         "test 1": 0,
         "test 2": 0,
         "test 3": 3000000,
@@ -2845,7 +2845,7 @@
       },
       "for t1 <= day# < t2": {
         "test 0": 0,
-        "test 1": 0,
+        "test 1": 1000.0,
         "test 2": 0,
         "test 3": 2000000,
         "test 4": 2000000,
@@ -2856,7 +2856,7 @@
       "for t2 <= day# < t3": {
         "test 0": 0,
         "test 1": 0,
-        "test 2": 0,
+        "test 2": 1000.0,
         "test 3": 2000000,
         "test 4": 2000000,
         "test 5": 2000000,
@@ -2944,7 +2944,7 @@
         "t2": 15,
         "t3": 20
       },
-      "delay to test": 21
+      "delay to test": 84
     },
     "test 4": {
       "result return time": 0,
@@ -5304,8 +5304,8 @@
     "resource availabilities": {
       "for 0 <= day# < t0": {
         "resource 0": 0,
-        "resource 1": 305,
-        "resource 2": 9,
+        "resource 1": 215.0,
+        "resource 2": 11.0,
         "resource 3": 0,
         "resource 4": 0,
         "resource 5": 0,
@@ -5362,18 +5362,38 @@
         "if observed recuperation": []
       },
       "for intervention 1": {
-        "if observed no symptoms": [1],
-        "if observed mild/moderate": [1],
-        "if observed severe": [1],
-        "if observed critical": [1],
-        "if observed recuperation": [1]
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
       },
       "for intervention 2": {
-        "if observed no symptoms": [2],
-        "if observed mild/moderate": [2],
-        "if observed severe": [2],
-        "if observed critical": [2],
-        "if observed recuperation": [2]
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
       },
       "for intervention 3": {
         "if observed no symptoms": [],
@@ -5383,18 +5403,38 @@
         "if observed recuperation": []
       },
       "for intervention 4": {
-        "if observed no symptoms": [1],
-        "if observed mild/moderate": [1],
-        "if observed severe": [1],
-        "if observed critical": [1],
-        "if observed recuperation": [1]
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
       },
       "for intervention 5": {
-        "if observed no symptoms": [2],
-        "if observed mild/moderate": [2],
-        "if observed severe": [2],
-        "if observed critical": [2],
-        "if observed recuperation": [2]
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
       },
       "for intervention 6": {
         "if observed no symptoms": [],
@@ -5404,18 +5444,38 @@
         "if observed recuperation": []
       },
       "for intervention 7": {
-        "if observed no symptoms": [1],
-        "if observed mild/moderate": [1],
-        "if observed severe": [1],
-        "if observed critical": [1],
-        "if observed recuperation": [1]
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
       },
       "for intervention 8": {
-        "if observed no symptoms": [2],
-        "if observed mild/moderate": [2],
-        "if observed severe": [2],
-        "if observed critical": [2],
-        "if observed recuperation": [2]
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
       },
       "for intervention 9": {
         "if observed no symptoms": [],
@@ -5432,18 +5492,38 @@
         "if observed recuperation": []
       },
       "for intervention 11": {
-        "if observed no symptoms": [1],
-        "if observed mild/moderate": [1],
-        "if observed severe": [1],
-        "if observed critical": [1],
-        "if observed recuperation": [1]
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
       },
       "for intervention 12": {
-        "if observed no symptoms": [2],
-        "if observed mild/moderate": [2],
-        "if observed severe": [2],
-        "if observed critical": [2],
-        "if observed recuperation": [2]
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
       },
       "for intervention 13": {
         "if observed no symptoms": [],
@@ -5460,18 +5540,38 @@
         "if observed recuperation": []
       },
       "for intervention 15": {
-        "if observed no symptoms": [1],
-        "if observed mild/moderate": [1],
-        "if observed severe": [1],
-        "if observed critical": [1],
-        "if observed recuperation": [1]
+        "if observed no symptoms": [
+          1
+        ],
+        "if observed mild/moderate": [
+          1
+        ],
+        "if observed severe": [
+          1
+        ],
+        "if observed critical": [
+          1
+        ],
+        "if observed recuperation": [
+          1
+        ]
       },
       "for intervention 16": {
-        "if observed no symptoms": [2],
-        "if observed mild/moderate": [2],
-        "if observed severe": [2],
-        "if observed critical": [2],
-        "if observed recuperation": [2]
+        "if observed no symptoms": [
+          2
+        ],
+        "if observed mild/moderate": [
+          2
+        ],
+        "if observed severe": [
+          2
+        ],
+        "if observed critical": [
+          2
+        ],
+        "if observed recuperation": [
+          2
+        ]
       },
       "for intervention 17": {
         "if observed no symptoms": [],

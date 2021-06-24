@@ -393,7 +393,7 @@ def transmission_multipliers(infile,strat_row):
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t0 <= day# < t1'] = strat_row['first.surge.transmission.multiplier']
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t1 <= day# < t2'] = strat_row['baseline.transmission.multiplier']
         infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for t2 <= day# < t3'] = strat_row['second.surge.transmission.multiplier']
-        infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['for day# > t3'] = strat_row['baseline.transmission.multiplier']
+        infile['transmissions'][f'intervention {i}']['transmission rate multipliers']['day# > t3'] = strat_row['baseline.transmission.multiplier']
 
     return(infile)
 
@@ -466,7 +466,7 @@ def ensure_col_sum(x,places):
 
 pwd=os.getcwd()
 
-name = 'test_run_2021-06-21'
+name = 'test_run_2021-06-21_VKD'
 run_list_path = os.path.join(pwd,'run_dictionary',name+'.xlsx')
 outfolder = os.path.join(pwd,name) # Filepath for output
 

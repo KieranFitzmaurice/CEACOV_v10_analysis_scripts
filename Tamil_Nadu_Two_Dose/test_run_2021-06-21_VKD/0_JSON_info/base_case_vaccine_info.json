@@ -1,0 +1,231 @@
+{
+  "run.name": "base_case",
+  "strategy": "vaccine",
+  "sim.size": 100000,
+  "proportion.0.to.19": 0.32271396,
+  "proportion.20.to.59": 0.57309993,
+  "proportion.60.plus": 0.10418611,
+  "proportion.infected.unvaccinated": 0.001,
+  "proportion.immune.unvaccinated": 0.315,
+  "prior.coverage.0.to.19": 0,
+  "prior.coverage.20.to.59": 0.1,
+  "prior.coverage.60.plus": 0.2,
+  "baseline.transmission.multiplier": 0.622396,
+  "first.surge.transmission.multiplier": 0.933594,
+  "second.surge.transmission.multiplier": 0.933594,
+  "first.surge.start.day": 30,
+  "first.surge.end.day": 90,
+  "second.surge.start.day": 270,
+  "second.surge.end.day": 330,
+  "uptake": 0.68,
+  "target.coverage": 0.68,
+  "vaccinations.per.day": 0.01,
+  "prob.vaccine.A": 1.0,
+  "dose.1.delay": 30,
+  "dose.2.delay": 30,
+  "dosing.interval": 84,
+  "VE1.1A": 0.639,
+  "VE2.1A": 0.76,
+  "VE3.1A": 0.888,
+  "VE4.1A": 0.888,
+  "VE1.2A": 0.659,
+  "VE2.2A": 0.813,
+  "VE3.2A": 0.95,
+  "VE4.2A": 0.95,
+  "VE1.1B": 0.613,
+  "VE2.1B": 0.729,
+  "VE3.1B": 0.852,
+  "VE4.1B": 0.852,
+  "VE1.2B": 0.629,
+  "VE2.2B": 0.78,
+  "VE3.2B": 0.911,
+  "VE4.2B": 0.911,
+  "hospital.beds.per.100k": 215.35797619921263,
+  "icu.beds.per.100k": 10.769492955526195,
+  "cost.per.dose.A": 3,
+  "cost.per.dose.B": 3,
+  "cost.per.hospital.day": 100,
+  "cost.per.ICU.day": 500,
+  "doses.A.remaining": 0.0,
+  "doses.B.remaining": 0.0,
+  "dose.1.per.day": 0.01,
+  "prob.naive.if.unvaccinated": 0.6849999999999999,
+  "covid.naive.severity.dist": {
+    "0-19y": {
+      "asymptomatic": 0.299342,
+      "mild/moderate": 0.697833,
+      "severe": 0.002495,
+      "critical": 0.00033
+    },
+    "20-59y": {
+      "asymptomatic": 0.179,
+      "mild/moderate": 0.803755,
+      "severe": 0.007952,
+      "critical": 0.009293
+    },
+    ">=60y": {
+      "asymptomatic": 0.171045,
+      "mild/moderate": 0.76374,
+      "severe": 0.013583,
+      "critical": 0.051632
+    }
+  },
+  "tn.group.dist": {
+    "tn_group 0": 0.32271396,
+    "tn_group 1": 0.51578994,
+    "tn_group 2": 0.08334889,
+    "tn_group 3": 0.07814721
+  },
+  "age.dist.by.tn.group": {
+    "tn_group 0": {
+      "0-19y": 1.0,
+      "20-59y": 0.0,
+      ">=60y": 0.0
+    },
+    "tn_group 1": {
+      "0-19y": 0.0,
+      "20-59y": 1.0,
+      ">=60y": 0.0
+    },
+    "tn_group 2": {
+      "0-19y": 0.0,
+      "20-59y": 0.0,
+      ">=60y": 1.0
+    },
+    "tn_group 3": {
+      "0-19y": 0.0,
+      "20-59y": 0.73335938,
+      ">=60y": 0.26664062
+    }
+  },
+  "disease.dist": {
+    "naive": {
+      "susceptible": 0.99854015,
+      "pre-infectious incubation": 0.00021898,
+      "asymptomatic": 0.00058394,
+      "mild/moderate": 0.00065547,
+      "severe": 7.3e-07,
+      "critical": 7.3e-07,
+      "recuperation": 0.0,
+      "immune": 0.0
+    },
+    "recovered": {
+      "susceptible": 0.0,
+      "pre-infectious incubation": 0.0,
+      "asymptomatic": 0.0,
+      "mild/moderate": 0.0,
+      "severe": 0.0,
+      "critical": 0.0,
+      "recuperation": 0.0,
+      "immune": 1.0
+    },
+    "vaccinated": {
+      "susceptible": 0.341,
+      "pre-infectious incubation": 0.0,
+      "asymptomatic": 0.0,
+      "mild/moderate": 0.0,
+      "severe": 0.0,
+      "critical": 0.0,
+      "recuperation": 0.0,
+      "immune": 0.659
+    }
+  },
+  "age.vaccination.dist.at.start": {
+    "0-19y": {
+      "unvaccinated": 0.32271396,
+      "vaccinated": 0.0
+    },
+    "20-59y": {
+      "unvaccinated": 0.5157899370000001,
+      "vaccinated": 0.057309993000000004
+    },
+    ">=60y": {
+      "unvaccinated": 0.08334888800000001,
+      "vaccinated": 0.020837222000000002
+    }
+  },
+  "vaccine.allocation": {
+    "0-19y": {
+      "vaccine A": 0.21944549279999997,
+      "vaccine B": 0.0
+    },
+    "20-59y": {
+      "vaccine A": 0.3323979594000001,
+      "vaccine B": 0.0
+    },
+    ">=60y": {
+      "vaccine A": 0.050009332800000014,
+      "vaccine B": 0.0
+    }
+  },
+  "additional.vaccine.coverage": {
+    "0-19y": {
+      "vaccine A": 0.6799999999999998,
+      "vaccine B": 0.0
+    },
+    "20-59y": {
+      "vaccine A": 0.5800000000000001,
+      "vaccine B": 0.0
+    },
+    ">=60y": {
+      "vaccine A": 0.4800000000000001,
+      "vaccine B": 0.0
+    }
+  },
+  "prob.full.immunity.dose.1": {
+    "0-19y": 0.639,
+    "20-59y": 0.639,
+    ">=60y": 0.639
+  },
+  "prob.full.immunity.dose.2": {
+    "0-19y": 0.05540166,
+    "20-59y": 0.05540166,
+    ">=60y": 0.05540166
+  },
+  "partial.immunity.severity.dist.dose.1": {
+    "0-19y": {
+      "asymptomatic": 0.53418859,
+      "mild/moderate": 0.46493496,
+      "severe": 0.00077407,
+      "critical": 0.00010238
+    },
+    "20-59y": {
+      "asymptomatic": 0.45418283,
+      "mild/moderate": 0.54046693,
+      "severe": 0.0024671,
+      "critical": 0.00288314
+    },
+    ">=60y": {
+      "asymptomatic": 0.44889418,
+      "mild/moderate": 0.53087291,
+      "severe": 0.00421412,
+      "critical": 0.01601879
+    }
+  },
+  "partial.immunity.severity.dist.dose.2": {
+    "0-19y": {
+      "asymptomatic": 0.61576819,
+      "mild/moderate": 0.38381758,
+      "severe": 0.00036584,
+      "critical": 4.839e-05
+    },
+    "20-59y": {
+      "asymptomatic": 0.54977419,
+      "mild/moderate": 0.44769721,
+      "severe": 0.00116598,
+      "critical": 0.00136262
+    },
+    ">=60y": {
+      "asymptomatic": 0.54541177,
+      "mild/moderate": 0.44502591,
+      "severe": 0.00199164,
+      "critical": 0.00757068
+    }
+  },
+  "time.intervals": [
+    30.0,
+    35.0,
+    68.0,
+    90.0
+  ]
+}
