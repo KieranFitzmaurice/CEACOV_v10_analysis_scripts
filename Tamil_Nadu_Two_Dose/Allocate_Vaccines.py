@@ -189,9 +189,11 @@ def calculate_rollout_intervals(vaccine_allocation,vaccinations_per_day,delay_to
     doses_0_to_19,doses_20_to_59,doses_60_plus = np.sum(vaccine_allocation,0)
 
     t0 = delay_to_efficacy_dose_1
-    t1 = t0 + np.round(doses_60_plus/(vaccinations_per_day + smallnum))
-    t2 = t1 + np.round(doses_20_to_59/(vaccinations_per_day + smallnum))
-    t3 = t2 + np.round(doses_0_to_19/(vaccinations_per_day + smallnum))
+
+    # Assume max day is going to be 1,000,000 in case you end up dividing by zero and the numbers get huge
+    t1 = t0 + min(np.round(doses_60_plus/(vaccinations_per_day + smallnum)),1e6)
+    t2 = t1 + min(np.round(doses_20_to_59/(vaccinations_per_day + smallnum)),1e6)
+    t3 = t2 + min(np.round(doses_0_to_19/(vaccinations_per_day + smallnum)),1e6)
 
     time_intervals = np.array([t0,t1,t2,t3])
 
@@ -202,6 +204,10 @@ def get_initial_conditions(age_vaccination_dist,unvaccinated_SIR,infected_state_
     Determine distribution of individuals across transmission groups, age groups, and health states at model entry
     """
 
+    # Small number to avoid introducing NaNs when dividing zero by zero
+    # Uses smallest number available based on machine precision (~1e-16)
+    smallnum = np.finfo(float).eps
+
     tn_group_dist = np.zeros(4)
     tn_group_dist[:3] = age_vaccination_dist[0,:]
     tn_group_dist[3] = np.sum(age_vaccination_dist[1,:])
@@ -211,7 +217,7 @@ def get_initial_conditions(age_vaccination_dist,unvaccinated_SIR,infected_state_
     age_dist_by_tn_group[0,0] = 1 # 0-19, unvaccinated
     age_dist_by_tn_group[1,1] = 1 # 20-59, unvaccinated
     age_dist_by_tn_group[2,2] = 1 # 60+, unvaccinated
-    age_dist_by_tn_group[3,:] = age_vaccination_dist[1,:]/np.sum(age_vaccination_dist[1,:]) # all ages, vaccinated
+    age_dist_by_tn_group[3,:] = age_vaccination_dist[1,:]/(np.sum(age_vaccination_dist[1,:])+smallnum) # all ages, vaccinated
 
     # Make sure rows sum to 1.0
     age_dist_by_tn_group = ensure_col_sum(age_dist_by_tn_group,8)
@@ -220,7 +226,7 @@ def get_initial_conditions(age_vaccination_dist,unvaccinated_SIR,infected_state_
     prob_unvaccinated_naive = unvaccinated_SIR[0] + unvaccinated_SIR[1]
 
     # Probability of being infected if you're unvaccinated and naive
-    prob_infected_naive = unvaccinated_SIR[1]/prob_unvaccinated_naive
+    prob_infected_naive = unvaccinated_SIR[1]/(prob_unvaccinated_naive+smallnum)
     prob_susceptible_naive = 1.0 - prob_infected_naive
 
     # Probability of being immune if you're vaccinated
