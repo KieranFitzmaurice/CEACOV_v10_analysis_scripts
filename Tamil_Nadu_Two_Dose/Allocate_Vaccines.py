@@ -74,9 +74,16 @@ def severity_reduction(VE1,VE2,VE3,VE4,P0,P1,P2,P3,P4):
     efficacy of a given vaccine and the original severity distribution
     of the age group
     """
-    P1v = (1-VE1)*P1 + (VE2-VE1)*(P2 + P3 + P4)
-    P2v = (1-VE2)*P2 + (VE3-VE2)*(P3 + P4)
-    P3v = (1-VE3)*P3 + (VE4-VE3)*(P4)
+    # Old method
+    # P1v = (1-VE1)*P1 + (VE2-VE1)*(P2 + P3 + P4)
+    # P2v = (1-VE2)*P2 + (VE3-VE2)*(P3 + P4)
+    # P3v = (1-VE3)*P3 + (VE4-VE3)*(P4)
+    # P4v = (1-VE4)*P4
+
+    # Method proposed by Fatma
+    P1v = (1-VE1)*P1
+    P2v = (1-VE2)*P2
+    P3v = (1-VE3)*P3
     P4v = (1-VE4)*P4
     P0v = 1 - (P1v + P2v + P3v + P4v)
 
@@ -472,7 +479,7 @@ def ensure_col_sum(x,places):
 
 pwd=os.getcwd()
 
-name = 'test_run_2021-06-21_VKD'
+name = 'test_run_2021-06-25'
 run_list_path = os.path.join(pwd,'run_dictionary',name+'.xlsx')
 outfolder = os.path.join(pwd,name) # Filepath for output
 
