@@ -479,7 +479,7 @@ def ensure_col_sum(x,places):
 
 pwd=os.getcwd()
 
-name = 'test_run_2021-06-25'
+name = 'calibrate_Re_2021-07-26'
 run_list_path = os.path.join(pwd,'run_dictionary',name+'.xlsx')
 outfolder = os.path.join(pwd,name) # Filepath for output
 
@@ -487,7 +487,7 @@ run_list = pd.read_excel(run_list_path,sheet_name = 'Main Parameters')
 severity_data = pd.read_excel(run_list_path,sheet_name = 'Covid-Naive Severity Dist',index_col=0)
 infected_state_data = pd.read_excel(run_list_path,sheet_name = 'Infected State Dist',index_col=0)
 
-template_path = os.path.join(pwd,'input_file_templates','two_dose_template.json')
+template_path = os.path.join(pwd,'input_file_templates','two_dose_template_2021-07-26.json')
 
 # Read in template input file
 with open(template_path) as f1:
